@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Altiplano PC · Tienda de tecnología en Juliaca</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1120;--panel:#141e31;--ink:#f5f8fc;--muted:#c0ccdb;--accent:#7fddff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.55 system-ui,sans-serif}header,main,footer{width:min(1100px,92%);margin:auto}header{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding:1.25rem 0}nav{display:flex;gap:.8rem;flex-wrap:wrap}a{color:var(--accent)}nav a{text-decoration:none}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.4rem,7vw,5rem);line-height:1.03;max-width:13ch;margin-bottom:1rem}h2{font-size:2rem;margin-bottom:.4rem}.hero{min-height:420px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;background:linear-gradient(90deg,#080f21 15%,#080f21ee 32%,transparent 77%),url(imagenes/portada.jpg) right center/auto 120% no-repeat,#080f21;padding:clamp(1.5rem,5vw,4rem);border:1px solid #293d5a;border-radius:1.5rem}.tag{letter-spacing:.13em;font-size:.75rem;font-weight:800;color:var(--accent);text-transform:uppercase}section{margin-bottom:3rem}p{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:1rem}article,form,.contact{background:var(--panel);padding:1.25rem;border-radius:1rem}article{display:flex;flex-direction:column}article button{margin-top:auto;align-self:flex-start}.price{font-size:1.35rem;color:var(--ink);font-weight:800}button,.btn{display:inline-block;background:var(--accent);color:#072336;border:0;border-radius:.55rem;padding:.75rem 1rem;font:inherit;font-weight:750;text-decoration:none;cursor:pointer}label{display:block;font-weight:650;margin-bottom:1rem}input,select{display:block;width:100%;padding:.65rem;background:#111924;color:var(--ink);border:1px solid #748298;border-radius:.4rem;font:inherit}form{max-width:660px}output{display:block;margin-top:1rem;color:var(--accent)}footer{border-top:1px solid #48566a;padding:1.5rem 0;color:var(--muted)}:focus-visible{outline:3px solid white;outline-offset:4px}
+
+.brand{color:var(--ink);text-decoration:none;font-size:1.1rem;font-weight:800;display:flex;align-items:center;gap:.55rem}
+.brand span{background:var(--accent);color:#072336;border-radius:.5rem;display:grid;place-items:center;width:2rem;height:2rem}
+nav a{color:var(--muted);padding:.35rem .2rem}nav a:hover{color:var(--accent)}
+h1{letter-spacing:-.055em}h2,h3{letter-spacing:-.025em}section[id]{scroll-margin-top:1rem}
+article{border:1px solid #293d5a;overflow:hidden}
+.product-photo{display:block;object-fit:cover;width:calc(100% + 2.5rem);height:auto;aspect-ratio:3/2;margin:-1.25rem -1.25rem 1.2rem}
+article h3{margin-bottom:.3rem}article .price{margin-bottom:.6rem}
+button:hover,.btn:hover{background:#b3eeff}
+@media(max-width:650px){.hero{min-height:0;padding-top:15rem;background:linear-gradient(0deg,#080f21 36%,transparent 85%),url(imagenes/portada.jpg) right top/auto 16rem no-repeat,#080f21}h1{max-width:16ch}}
+
+:root{--bg:#080e19;--panel:#111c2d;--muted:#b7c5d8;--accent:#83e6ff}
+header,main,footer{width:min(1240px,92%)}header{min-height:74px}nav{gap:1.35rem}
+.hero{min-height:510px;padding:clamp(1.4rem,5vw,4.6rem);margin-bottom:0;background-size:auto,auto 112%,auto}
+.hero p:not(.tag){max-width:36ch;font-size:1.1rem}.hero h1{font-size:clamp(3rem,7vw,6.1rem);max-width:11ch}
+.secondary{margin-top:1rem;text-underline-offset:.25em}
+.strip{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.7rem 1.5rem;padding:1.1rem .25rem;margin-bottom:4rem;border-bottom:1px solid #293d5a;color:var(--muted);font-size:.84rem}
+section{margin-bottom:4.4rem}h2{font-size:clamp(1.85rem,4vw,3rem);line-height:1.08}
+.toolbar{display:flex;flex-wrap:wrap;gap:.55rem;margin:1.3rem 0}
+.toolbar button{border:1px solid #344760;background:#111b2a;color:var(--ink);border-radius:99px;padding:.45rem .85rem;font-size:.9rem}
+.toolbar button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#071827}
+.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+article[hidden]{display:none}article h3{font-size:1.34rem}article .price{font-size:1.6rem}article button{width:100%}
+.guide,.quote{display:grid;grid-template-columns:.85fr 1.15fr;gap:2rem;align-items:start;padding:clamp(1.2rem,4vw,3rem);border:1px solid #293d5a;border-radius:1.25rem;background:#0d1727}
+details{border-bottom:1px solid #344760;padding:.9rem 0}summary{cursor:pointer;font-weight:750}details p{margin:.65rem 0 0;padding-left:1rem}
+.quote form{width:100%;max-width:none;border:1px solid #344760}.steps{padding-left:1.3rem;color:var(--muted)}.demo{font-size:.85rem}
+.contact{border:1px solid #293d5a}footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.guide,.quote{grid-template-columns:1fr;gap:1rem}}
+@media(max-width:650px){header{gap:.4rem}nav{gap:.75rem;font-size:.9rem}.hero{min-height:0;padding-top:14rem;background-size:auto,auto 15rem,auto}.grid{grid-template-columns:1fr}.strip{margin-bottom:2.5rem}section{margin-bottom:3rem}}
+</style>
+<header><a class="brand" href="#inicio"><span aria-hidden="true">A</span> Altiplano PC</a><nav aria-label="Menú principal"><a href="#inicio">Inicio</a><a href="#catalogo">Catálogo</a><a href="#asesoria">Guía de compra</a><a href="#pedidos">Cotizar</a><a href="#contacto">Contacto</a></nav></header>
+<main>
+<section class="hero" id="inicio"><p class="tag">Juliaca, Puno · Catálogo de tecnología</p><h1>Tu equipo, a tu medida.</h1><p>Compara computadoras, laptops y tarjetas gráficas para estudiar, trabajar o renovar tu PC.</p><a class="btn" href="#catalogo">Explorar catálogo ↗</a><a class="secondary" href="#asesoria">Cómo elegir tu equipo ↓</a></section><div class="strip"><span>01 / Equipos de escritorio</span><span>02 / Laptops para el día a día</span><span>03 / Actualizaciones para PC</span></div>
+<section id="catalogo"><p class="tag">Equipos y componentes</p><h2>Explora el catálogo</h2><p>Precios y configuraciones de demostración. Imágenes generadas para representar los productos.</p>
+<div class="toolbar" role="group" aria-label="Filtrar catálogo">
+<button type="button" data-filter="todos" aria-pressed="true">Todos</button>
+<button type="button" data-filter="pc" aria-pressed="false">Computadoras</button>
+<button type="button" data-filter="laptop" aria-pressed="false">Laptops</button>
+<button type="button" data-filter="gpu" aria-pressed="false">Tarjetas gráficas</button>
+</div><div class="grid">
+<article data-category="pc"><img class="product-photo" src="imagenes/computadora.jpg" alt="Computadora de escritorio con torre negra y monitor" width="768" height="512" loading="lazy"><p class="tag">Computadora</p><h3>Altiplano Home</h3><p class="price">S/ 1,499</p><p>PC de escritorio para ofimática y clases virtuales. Procesador de seis núcleos, 16 GB de RAM y SSD de 512 GB.</p><button type="button" data-product="Altiplano Home">Solicitar cotización</button></article>
+<article data-category="laptop"><img class="product-photo" src="imagenes/laptop.jpg" alt="Laptop negra abierta con pantalla azul" width="767" height="512" loading="lazy"><p class="tag">Laptop</p><h3>Altiplano Estudio 15</h3><p class="price">S/ 1,899</p><p>Equipo portátil para trabajos y videollamadas. Pantalla de 15,6 pulgadas, 16 GB de RAM y SSD de 512 GB.</p><button type="button" data-product="Altiplano Estudio 15">Solicitar cotización</button></article>
+<article data-category="gpu"><img class="product-photo" src="imagenes/tarjeta-grafica.jpg" alt="Tarjeta gráfica de dos ventiladores" width="768" height="512" loading="lazy"><p class="tag">Tarjeta gráfica</p><h3>Altiplano Gaming 8 GB</h3><p class="price">S/ 1,099</p><p>Componente para actualizar una PC. Memoria de video de 8 GB, conexión PCIe y dos ventiladores.</p><button type="button" data-product="Altiplano Gaming 8 GB">Solicitar cotización</button></article>
+</div></section>
+<section id="asesoria" class="guide">
+<div><p class="tag">Guía de compra</p><h2>¿Qué equipo te conviene?</h2><p>Empieza por lo que haces con más frecuencia y revisa las especificaciones que afectan ese uso.</p><a href="#catalogo">Comparar los equipos ↗</a></div>
+<div class="guide-list">
+<details open><summary>01 · Para estudiar o trabajar fuera de casa</summary><p>Una laptop te permite trabajar en distintos lugares. Compara el tamaño de pantalla y la memoria si usas videollamadas y varias aplicaciones a la vez.</p></details>
+<details><summary>02 · Para un escritorio fijo</summary><p>Si trabajas desde un mismo lugar, revisa las conexiones para tu monitor y periféricos. Un SSD ayuda a que el sistema y los programas carguen con rapidez.</p></details>
+<details><summary>03 · Para actualizar tu computadora</summary><p>Antes de elegir una tarjeta gráfica, comprueba el espacio del gabinete, la ranura de la placa y la potencia y conectores de la fuente.</p></details>
+</div></section>
+<section id="pedidos" class="quote"><div><p class="tag">Cotizaciones</p><h2>Solicita una cotización</h2><p>Elige un equipo y prepara una solicitud de prueba para consultar precio, disponibilidad o compatibilidad.</p>
+<ol class="steps"><li>Selecciona un producto.</li><li>Indica cuántas unidades necesitas.</li><li>Simula la solicitud y revisa el resumen.</li></ol><p class="demo">Demostración académica · Sin pagos ni datos personales.</p></div>
+<form><label>Producto<select id="producto" required><option value="">Selecciona un producto</option><option>Altiplano Home</option><option>Altiplano Estudio 15</option><option>Altiplano Gaming 8 GB</option><option>Consulta general</option></select></label>
+<label>Cantidad<input id="cantidad" type="number" min="1" max="99" step="1" value="1" required></label>
+<label>Motivo<select id="motivo"><option>Precio y disponibilidad</option><option>Compatibilidad</option><option>Consulta general</option></select></label>
+<button type="submit">Simular solicitud</button><output aria-live="polite"></output></form></section>
+<section class="contact" id="contacto"><h2>Contacto</h2><p>Juliaca, Puno · Ubicación referencial</p><a href="#pedidos" data-product="Consulta general">Hacer una consulta general</a></section>
+</main>
+<footer><strong>Altiplano PC</strong><span>Proyecto académico de Marketing Digital · Juliaca, Puno</span><a href="#inicio">Volver arriba ↑</a></footer>
+<script>
+const filters = document.querySelectorAll('[data-filter]');
+const cards = document.querySelectorAll('[data-category]');
+filters.forEach(filter => {
+  filter.addEventListener('click', () => {
+    const category = filter.dataset.filter;
+    filters.forEach(button => button.setAttribute('aria-pressed', String(button === filter)));
+    cards.forEach(card => {
+      card.hidden = category !== 'todos' && card.dataset.category !== category;
+    });
+  });
+});
+const form = document.querySelector('form');
+const product = document.querySelector('#producto');
+const result = form.querySelector('output');
+document.querySelectorAll('[data-product]').forEach(control => {
+  control.addEventListener('click', event => {
+    event.preventDefault();
+    product.value = control.dataset.product;
+    result.textContent = '';
+    location.hash = 'pedidos';
+    product.focus();
+  });
+});
+form.addEventListener('input', () => { result.textContent = ''; });
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  const quantity = document.querySelector('#cantidad').value;
+  const reason = document.querySelector('#motivo').value;
+  result.textContent = product.value === 'Consulta general'
+    ? 'Consulta general simulada.'
+    : 'Solicitud simulada: ' + quantity + ' × ' + product.value + ' · ' + reason + '.';
+});
+</script>
+</html>
